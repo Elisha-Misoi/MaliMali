@@ -43,8 +43,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Categories.xaml.cs">
       <DependentUpon>Categories.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Item.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
   </ItemGroup>
 </Project>

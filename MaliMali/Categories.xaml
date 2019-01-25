@@ -19,6 +19,9 @@
             </Grid.RowDefinitions>
             
             <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Handle_Tapped"/>
+                </StackLayout.GestureRecognizers>
                 <Image HorizontalOptions="Center" Source="electronics.png"/>
                 <Label HorizontalOptions="Center" Text="Electronics"/>
             </StackLayout>
