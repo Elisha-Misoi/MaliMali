@@ -31,6 +31,9 @@ namespace MaliMali.iOS
             // Color of the selected tab icon:
             UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(3, 169, 245);
 
+            // Initialize SFCarouesl
+            new Syncfusion.SfCarousel.XForms.iOS.SfCarouselRenderer();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(uiApplication, launchOptions);
