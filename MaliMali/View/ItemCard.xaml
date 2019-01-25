@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="MaliMali.View.ItemCard"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms">
+    <ContentView.Content>
+
+
+        <Frame Margin="10"
+               VerticalOptions="Start"
+               CornerRadius="10"
+               Padding="10">
+
+            <Grid RowSpacing="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0"
+                       FontAttributes="Bold"
+                       FontSize="14"
+                       Text="BWM M5" />
+
+                <Frame Grid.Row="1"
+                       CornerRadius="10"
+                       HasShadow="false"
+                       IsClippedToBounds="true"
+                       Padding="0">
+                    <Image Aspect="AspectFill" Source="car.jpg" />
+                </Frame>
+
+                <Grid Grid.Row="2">
+
+                    <Grid.ColumnDefinitions>
+                        
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                           FontAttributes="Bold"
+                           FontSize="14"
+                           Text="Price: 800K"
+                           TextColor="#03a9f5" />
+
+
+                    <rating:SfRating x:Name="rating"
+                                     Grid.Column="1"
+                                     HorizontalOptions="End"
+                                     ItemSize="15"
+                                     ReadOnly="true"
+                                     Value="4">
+                        <rating:SfRating.RatingSettings>
+                            <rating:SfRatingSettings RatedFill="#03a9f5"
+                                                     RatedStrokeWidth="0"
+                                                     UnRatedFill="White"
+                                                     UnRatedStrokeWidth="1" />
+                        </rating:SfRating.RatingSettings>
+                    </rating:SfRating>
+                   
+
+                </Grid>
+                
+                <Label x:Name="description" Text="This is a well maintained car..." FontAttributes="Bold" FontSize="14" TextColor="Gray" Grid.Row="3"/>
+
+            </Grid>
+
+        </Frame>
+
+
+    </ContentView.Content>
+</ContentView>
