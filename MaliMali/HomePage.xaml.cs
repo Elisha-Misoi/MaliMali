@@ -12,5 +12,15 @@ namespace MaliMali
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        async void Categories_Tapped(object sender, System.EventArgs e)
+        {
+
+        }
+
+        async void ItemsListView_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        {
+           
+        }
     }
 }

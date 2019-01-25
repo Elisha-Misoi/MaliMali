@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="MaliMali.Categories"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        
+        <Grid Margin="10">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+                <Image HorizontalOptions="Center" Source="electronics.png"/>
+                <Label HorizontalOptions="Center" Text="Electronics"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="1">
+                <Image HorizontalOptions="Center" Source="household.png"/>
+                <Label HorizontalOptions="Center" Text="Households"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
+                <Image HorizontalOptions="Center" Source="clothes.png"/>
+                <Label HorizontalOptions="Center" Text="Clothes"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1">
+                <Image HorizontalOptions="Center" Source="food.png"/>
+                <Label HorizontalOptions="Center" Text="Food"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="0">
+                <Image HorizontalOptions="Center" Source="toys.png"/>
+                <Label HorizontalOptions="Center" Text="Toys"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="1">
+                <Image HorizontalOptions="Center" Source="cars.png"/>
+                <Label HorizontalOptions="Center" Text="Vehicles"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="3" Grid.ColumnSpan="2">
+                <Image HorizontalOptions="Center" Source="all.png"/>
+                <Label HorizontalOptions="Center" Text="All"/>
+            </StackLayout>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
