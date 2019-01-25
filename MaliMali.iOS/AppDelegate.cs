@@ -38,6 +38,9 @@ namespace MaliMali.iOS
             // Initialize ImageCircle
             ImageCircleRenderer.Init();
 
+            // Initalize Firebase App
+            Firebase.Core.App.Configure();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(uiApplication, launchOptions);
