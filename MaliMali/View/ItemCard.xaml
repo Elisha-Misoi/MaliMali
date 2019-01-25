@@ -9,14 +9,16 @@
         <Frame Margin="10"
                VerticalOptions="Start"
                CornerRadius="10"
+               BackgroundColor="White"
                Padding="10">
 
-            <Grid RowSpacing="10">
+            <Grid RowSpacing="10" BackgroundColor="White">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="200" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
@@ -24,14 +26,14 @@
                        FontAttributes="Bold"
                        FontSize="14"
                        x:Name="title"
-                       Text="BWM M5" />
+                       Text="{Binding Title}" />
 
                 <Frame Grid.Row="1"
                        CornerRadius="10"
                        HasShadow="false"
                        IsClippedToBounds="true"
                        Padding="0">
-                    <Image Aspect="AspectFill" x:Name="image" Source="car.jpg" />
+                    <Image Aspect="AspectFill" x:Name="image" Source="{Binding Image_url}" />
                 </Frame>
 
                 <Grid Grid.Row="2">
@@ -45,7 +47,7 @@
                     <Label Grid.Column="0"
                            FontAttributes="Bold"
                            FontSize="14"
-                           Text="Ksh. 800K"
+                           Text="{Binding Price}"
                            x:Name="price"
                            TextColor="#03a9f5" />
 
@@ -67,7 +69,9 @@
 
                 </Grid>
                 
-                <Label x:Name="description" Text="This is a well maintained car..." FontAttributes="Bold" FontSize="14" TextColor="Gray" Grid.Row="3"/>
+                <Label  Text="{Binding Category}" FontAttributes="Bold" FontSize="14" TextColor="Gray" Grid.Row="3"/>
+                
+                 <Label  Text="{Binding Description}" FontAttributes="Bold" FontSize="14" TextColor="Gray" Grid.Row="4"/>
 
             </Grid>
 

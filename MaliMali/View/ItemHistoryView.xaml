@@ -23,7 +23,7 @@
                        HasShadow="false"
                        IsClippedToBounds="true"
                        Padding="0">
-                    <Image Aspect="AspectFill" Source="car.jpg" />
+                    <Image Aspect="AspectFill" Source="{Binding Image_url}" />
                 </Frame>
 
 
@@ -38,7 +38,7 @@
                            FontAttributes="Bold"
                            FontSize="14"
                            LineBreakMode="TailTruncation"
-                           Text="BMW M5" />
+                           Text="{Binding Title}" />
                     <Label Grid.Row="1"
                            VerticalOptions="Center"
                            FontAttributes="Bold"
@@ -55,7 +55,7 @@
                        HorizontalOptions="End"
                        FontAttributes="Bold"
                        FontSize="13"
-                       Text="Ksh. 800,000"
+                       Text="{Binding Price}"
                        TextColor="#03a9f5" />
 
 

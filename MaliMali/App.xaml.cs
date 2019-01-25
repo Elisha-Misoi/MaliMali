@@ -1,6 +1,9 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MaliMali
@@ -13,12 +16,29 @@ namespace MaliMali
 
             InitializeComponent();
 
-            MainPage = new Tabbed();
+            if (string.IsNullOrEmpty(Model.Settings.UID)) 
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+            else 
+            {
+                MainPage = new NavigationPage(new Tabbed());
+            }
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
+            AppCenter.Start("ios=c922d353-a990-4184-9872-09968e129ed6;", typeof(Analytics), typeof(Crashes));
+            try
+            {
+                // Test Crash.
+                Crashes.GenerateTestCrash();
+            }
+            catch (Exception exception)
+            {
+                Crashes.TrackError(exception);
+            }
         }
 
         protected override void OnSleep()

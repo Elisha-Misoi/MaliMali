@@ -12,6 +12,9 @@ namespace MaliMali
         public LoginPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            activityIndicator.IsRunning = false;
+            restart.IsVisible = false;
         }
 
         async void SigninFrame_Tapped(object sender, System.EventArgs e)
@@ -90,6 +93,8 @@ namespace MaliMali
                     Model.Settings.AccessToken = await User.GetIdTokenAsync(true);
                     description.Text = "Signing you in...";
                     Model.Settings.IsLoggedIn = true;
+                    Navigation.PushModalAsync(new NavigationPage(new Tabbed()));
+                    Application.Current.MainPage = new NavigationPage(new Tabbed());
                 }
             }
             catch (AggregateException ex)

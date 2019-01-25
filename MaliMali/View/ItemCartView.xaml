@@ -5,24 +5,25 @@
     <ContentView.Content>
 
         <Frame Margin="10"
+               BackgroundColor="White"
                VerticalOptions="Start"
                CornerRadius="10"
                Padding="10">
 
-            <StackLayout Spacing="5">
-                <Frame CornerRadius="10"
+            <StackLayout Spacing="5" BackgroundColor="White">
+                <Frame HeightRequest="100" CornerRadius="10"
                        IsClippedToBounds="true"
                        Padding="0">
-                    <Image Source="car.jpg" />
+                    <Image Aspect="AspectFill" Source="{Binding Image_url}" />
                 </Frame>
                 <Label x:Name="title"
                        FontAttributes="Bold"
                        FontSize="14"
-                       Text="BMW M5" />
+                       Text="{Binding Title}" />
                 <Label x:Name="price"
                        FontAttributes="Bold"
                        FontSize="14"
-                       Text="Ksh. 800K"
+                       Text="{Binding Price}"
                        TextColor="#03a9f5" />
 
                 <Label FontAttributes="Bold"

@@ -10,10 +10,12 @@ namespace MaliMali.Model
         public long Price { get; set; }
         public int Rating { get; set; }
         public List<string> Images {get; set;}
+        public string Image_url { get; set; }
         public long Post_Date { get; set; }
         public string Item_ID { get; set; }
         public string User_ID { get; set; }
         public long Available { get; set; }
+        public string Category { get; set; }
 
         public Item()
         {

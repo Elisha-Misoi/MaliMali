@@ -20,7 +20,7 @@
                        Text="Total Spent:" />
                 <Label FontAttributes="Bold"
                        FontSize="20"
-                       Text="Ksh. 876,000"
+                       x:Name="total_spent"
                        TextColor="#03a9f5" />
 
             </StackLayout>
@@ -28,8 +28,7 @@
 
             <ListView x:Name="ItemsListView"
                       Grid.Row="1"
-                      HasUnevenRows="false"
-                      RowHeight="280"
+                      HasUnevenRows="true"
                       SelectionMode="None"
                       SeparatorVisibility="None">
 

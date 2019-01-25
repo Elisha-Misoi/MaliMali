@@ -10,4 +10,39 @@
                     Disappearing="MainPage_Disappearing"
                     Icon="home.png" />
     
+    
+    <NavigationPage x:Name="cartpage"
+                    Title="Cart"
+                    Appearing="CartPage_Appearing"
+                    Disappearing="CartPage_Disappearing"
+                    Icon="cart.png">
+        <x:Arguments>
+            <local:CartPage />
+        </x:Arguments>
+    </NavigationPage>
+    
+    
+    <NavigationPage x:Name="adminpage"
+                    Title="Upload"
+                    Appearing="AdminPage_Appearing"
+                    Disappearing="AdminPage_Disappearing"
+                    Icon="camera.png">
+        <x:Arguments>
+            <local:AdminPage />
+        </x:Arguments>
+    </NavigationPage>
+    
+    
+     <NavigationPage x:Name="historypage"
+                    Title="Hitory"
+                    Appearing="HistoryPage_Appearing"
+                    Disappearing="HistoryPage_Disappearing"
+                    Icon="stats.png">
+        <x:Arguments>
+            <local:History />
+        </x:Arguments>
+    </NavigationPage>
+    
+    
+    
 </TabbedPage>
