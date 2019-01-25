@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="MaliMali.HomePage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MaliMali"
+             xmlns:view="clr-namespace:MaliMali.View">
+    <ContentPage.Content>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Margin="10,20,10,0" HeightRequest="30">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0"
+                             VerticalOptions="Center"
+                             Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Categories_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                    <Image HeightRequest="25"
+                           VerticalOptions="Center"
+                           Source="category.png" />
+                    <Label VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           Text="Categories" />
+                </StackLayout>
+
+                <ImageButton Grid.Column="1"
+                             HeightRequest="30"
+                             HorizontalOptions="End"
+                             VerticalOptions="Center"
+                             Source="search.png" />
+
+            </Grid>
+
+
+            <ListView x:Name="ItemsListView"
+                      HasUnevenRows="false"
+                      ItemTapped="ItemsListView_ItemTapped"
+                      RowHeight="280"
+                      SelectionMode="Single"
+                      SeparatorVisibility="None">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <view:ItemCard />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

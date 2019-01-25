@@ -18,6 +18,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -28,6 +32,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Tabbed.xaml.cs">
       <DependentUpon>Tabbed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

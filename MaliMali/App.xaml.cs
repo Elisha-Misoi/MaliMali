@@ -9,6 +9,8 @@ namespace MaliMali
     {
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTcxNThAMzEzNjJlMzQyZTMwSi91RzVVYTY4Y0o1Z2RWV1ByZVJHT2phUzdYMFNlb3luN2J5S3hmNVZ2OD0=");
+
             InitializeComponent();
 
             MainPage = new Tabbed();

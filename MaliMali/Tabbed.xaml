@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <TabbedPage x:Class="MaliMali.Tabbed"
             xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:local="clr-namespace:MaliMali"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <ContentPage.Content />
+    
+            <local:HomePage x:Name="homepage"
+                    Title="Home"
+                    Appearing="MainPage_Appearing"
+                    Disappearing="MainPage_Disappearing"
+                    Icon="home.png" />
+    
 </TabbedPage>

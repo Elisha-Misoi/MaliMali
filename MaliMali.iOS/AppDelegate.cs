@@ -28,6 +28,9 @@ namespace MaliMali.iOS
             // Initialize SFRating
             new SfRatingRenderer();
 
+            // Color of the selected tab icon:
+            UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(3, 169, 245);
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(uiApplication, launchOptions);
