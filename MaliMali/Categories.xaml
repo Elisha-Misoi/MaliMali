@@ -3,60 +3,99 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Content>
-        
+
         <Grid Margin="10">
-            
+
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            
+
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+
+            <StackLayout Grid.Row="0"
+                         Grid.Column="0"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Handle_Tapped"/>
+                    <TapGestureRecognizer Tapped="Electronics_Tapped" />
                 </StackLayout.GestureRecognizers>
-                <Image HorizontalOptions="Center" Source="electronics.png"/>
-                <Label HorizontalOptions="Center" Text="Electronics"/>
+                <Image HorizontalOptions="Center" Source="electronics.png" />
+                <Label HorizontalOptions="Center" Text="Electronics" />
             </StackLayout>
-            
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="1">
-                <Image HorizontalOptions="Center" Source="household.png"/>
-                <Label HorizontalOptions="Center" Text="Households"/>
+
+            <StackLayout Grid.Row="0"
+                         Grid.Column="1"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Households_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image HorizontalOptions="Center" Source="household.png" />
+                <Label HorizontalOptions="Center" Text="Households" />
             </StackLayout>
-            
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
-                <Image HorizontalOptions="Center" Source="clothes.png"/>
-                <Label HorizontalOptions="Center" Text="Clothes"/>
+
+            <StackLayout Grid.Row="1"
+                         Grid.Column="0"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Clothes_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image HorizontalOptions="Center" Source="clothes.png" />
+                <Label HorizontalOptions="Center" Text="Clothes" />
             </StackLayout>
-            
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1">
-                <Image HorizontalOptions="Center" Source="food.png"/>
-                <Label HorizontalOptions="Center" Text="Food"/>
+
+            <StackLayout Grid.Row="1"
+                         Grid.Column="1"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Food_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image HorizontalOptions="Center" Source="food.png" />
+                <Label HorizontalOptions="Center" Text="Food" />
             </StackLayout>
-            
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="0">
-                <Image HorizontalOptions="Center" Source="toys.png"/>
-                <Label HorizontalOptions="Center" Text="Toys"/>
+
+            <StackLayout Grid.Row="2"
+                         Grid.Column="0"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Toys_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image HorizontalOptions="Center" Source="toys.png" />
+                <Label HorizontalOptions="Center" Text="Toys" />
             </StackLayout>
-            
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="1">
-                <Image HorizontalOptions="Center" Source="cars.png"/>
-                <Label HorizontalOptions="Center" Text="Vehicles"/>
+
+            <StackLayout Grid.Row="2"
+                         Grid.Column="1"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Vehicles_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image HorizontalOptions="Center" Source="cars.png" />
+                <Label HorizontalOptions="Center" Text="Vehicles" />
             </StackLayout>
-            
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="3" Grid.ColumnSpan="2">
-                <Image HorizontalOptions="Center" Source="all.png"/>
-                <Label HorizontalOptions="Center" Text="All"/>
+
+            <StackLayout Grid.Row="3"
+                         Grid.ColumnSpan="2"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="All_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image HorizontalOptions="Center" Source="all.png" />
+                <Label HorizontalOptions="Center" Text="All" />
             </StackLayout>
-            
+
         </Grid>
-        
+
     </ContentPage.Content>
 </ContentPage>

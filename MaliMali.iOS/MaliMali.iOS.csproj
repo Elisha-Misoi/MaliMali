@@ -155,6 +155,9 @@
     <PackageReference Include="Syncfusion.Xamarin.SfRating">
       <Version>16.4.0.48</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfCarousel">
+      <Version>16.4.0.48</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\car.jpg" />

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="MaliMali.CartPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:view="clr-namespace:MaliMali.View">
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="WhiteSmoke">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="202" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <!--<syncfusion:SfCarousel x:Name="carousel"
+                                   Grid.Row="0"
+                                   ItemHeight="200"
+                                   RotationAngle="45"
+                                   SelectionChanged="Carousel_SelectionChanged"
+                                   Offset="20">
+                <syncfusion:SfCarousel.ItemTemplate>
+                    <DataTemplate>
+                        <view:ItemCartView />
+                    </DataTemplate>
+                </syncfusion:SfCarousel.ItemTemplate>
+            </syncfusion:SfCarousel>-->
+
+
+            <Frame Grid.Row="1" Margin="10">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+
+
+                    <Grid Grid.Row="0" VerticalOptions="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"
+                                   Text="Subtotal: " />
+                            <Label Grid.Column="1"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="End"
+                                   Text="Ksh. 800,000"
+                                   TextColor="Gray" />
+
+                        </Grid>
+
+                        <BoxView Grid.Row="1"
+                                 Margin="0,5,0,10"
+                                 HeightRequest="1"
+                                 HorizontalOptions="FillAndExpand"
+                                 Color="#a9a9a9" />
+                    </Grid>
+
+
+
+                    <Grid Grid.Row="1" VerticalOptions="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"
+                                   Text="Taxes: " />
+                            <Label Grid.Column="1"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="End"
+                                   Text="Ksh. 76,000"
+                                   TextColor="Gray" />
+
+                        </Grid>
+
+                        <BoxView Grid.Row="1"
+                                 Margin="0,5,0,10"
+                                 HeightRequest="1"
+                                 HorizontalOptions="FillAndExpand"
+                                 Color="#a9a9a9" />
+                    </Grid>
+
+
+
+                    <Grid Grid.Row="2" VerticalOptions="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"
+                                   FontSize="22"
+                                   Text="Total: " />
+                            <Label Grid.Column="1"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"
+                                   FontSize="22"
+                                   HorizontalTextAlignment="End"
+                                   Text="Ksh. 876,000"
+                                   TextColor="Gray" />
+
+                        </Grid>
+
+                        <BoxView Grid.Row="1"
+                                 Margin="0,5,0,10"
+                                 HeightRequest="1"
+                                 HorizontalOptions="FillAndExpand"
+                                 Color="#a9a9a9" />
+                    </Grid>
+
+
+
+                </Grid>
+
+            </Frame>
+
+
+            <Frame Grid.Row="2"
+                   Margin="10"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="End"
+                   BackgroundColor="#03a9f5"
+                   BorderColor="#03a9f5"
+                   CornerRadius="1"
+                   Padding="15">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Checkout_Tapped" />
+                </Frame.GestureRecognizers>
+                <Label x:Name="signinLable"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="17"
+                       Text="Go to checkout"
+                       TextColor="White" />
+            </Frame>
+
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="MaliMali.View.ItemCartView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+
+        <Frame Margin="10"
+               VerticalOptions="Start"
+               CornerRadius="10"
+               Padding="10">
+
+            <StackLayout Spacing="5">
+                <Frame CornerRadius="10"
+                       IsClippedToBounds="true"
+                       Padding="0">
+                    <Image Source="car.jpg" />
+                </Frame>
+                <Label x:Name="title"
+                       FontAttributes="Bold"
+                       FontSize="14"
+                       Text="BMW M5" />
+                <Label x:Name="price"
+                       FontAttributes="Bold"
+                       FontSize="14"
+                       Text="Ksh. 800K"
+                       TextColor="#03a9f5" />
+
+                <Label FontAttributes="Bold"
+                       FontSize="14"
+                       Text="Amount: 1"
+                       TextColor="Gray" />
+
+            </StackLayout>
+
+
+        </Frame>
+
+    </ContentView.Content>
+</ContentView>
