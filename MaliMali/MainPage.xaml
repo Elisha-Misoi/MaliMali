@@ -1,7 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MaliMali" x:Class="MaliMali.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MaliMali.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MaliMali">
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <!--  Place new controls here  -->
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Text="Welcome to Xamarin.Forms!" />
     </StackLayout>
 </ContentPage>
