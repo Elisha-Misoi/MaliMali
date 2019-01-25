@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="MaliMali.View.ItemHistoryView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+
+        <Frame Margin="10"
+               HeightRequest="60"
+               VerticalOptions="Start"
+               CornerRadius="10"
+               Padding="5">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0"
+                       Padding="0"
+                       WidthRequest="80"
+                       HasShadow="false"
+                       IsClippedToBounds="true">
+                    <Image Aspect="AspectFill" Source="car.jpg" />
+                </Frame>
+                
+                
+                <Grid Grid.Column="1" Margin="10,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Grid.Row="0" Text="BMW M5" FontSize="14" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Text="Date: 25th Jan " TextColor="Gray" FontSize="14" VerticalOptions="Center" FontAttributes="Bold"/>
+                    
+                </Grid>
+                
+                
+                <Label Grid.Column="2" HorizontalOptions="End" Text="Ksh. 800,000" FontAttributes="Bold" FontSize="13" TextColor="#03a9f5" Margin="0,5,0,0"/>
+                
+
+            </Grid>
+
+
+        </Frame>
+
+    </ContentPage.Content>
+</ContentPage>
