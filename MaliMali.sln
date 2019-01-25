@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaliMali.iOS", "MaliMali.iOS\MaliMali.iOS.csproj", "{33402365-661D-46B6-B976-14E24EC169F2}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MaliMali", "MaliMali\MaliMali.shproj", "{4BBB9397-5CC0-428F-A390-2CE0D6564C84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33402365-661D-46B6-B976-14E24EC169F2}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{33402365-661D-46B6-B976-14E24EC169F2}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{33402365-661D-46B6-B976-14E24EC169F2}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{33402365-661D-46B6-B976-14E24EC169F2}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{33402365-661D-46B6-B976-14E24EC169F2}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{33402365-661D-46B6-B976-14E24EC169F2}.Debug|iPhone.Build.0 = Debug|iPhone
+		{33402365-661D-46B6-B976-14E24EC169F2}.Release|iPhone.ActiveCfg = Release|iPhone
+		{33402365-661D-46B6-B976-14E24EC169F2}.Release|iPhone.Build.0 = Release|iPhone
+		{33402365-661D-46B6-B976-14E24EC169F2}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{33402365-661D-46B6-B976-14E24EC169F2}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{33402365-661D-46B6-B976-14E24EC169F2}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{33402365-661D-46B6-B976-14E24EC169F2}.AppStore|iPhone.Build.0 = AppStore|iPhone
+	EndGlobalSection
+EndGlobal
