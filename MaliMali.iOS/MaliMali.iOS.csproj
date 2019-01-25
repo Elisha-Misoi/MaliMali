@@ -158,6 +158,9 @@
     <PackageReference Include="Syncfusion.Xamarin.SfCarousel">
       <Version>16.4.0.48</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\car.jpg" />

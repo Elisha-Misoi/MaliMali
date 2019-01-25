@@ -108,9 +108,8 @@
 
 
             </Frame>
-
-
-
+            
+            
             <Frame Grid.Row="2"
                    Margin="10"
                    HorizontalOptions="FillAndExpand"
@@ -120,9 +119,9 @@
                    CornerRadius="1"
                    Padding="15">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Checkout_Tapped" />
+                    <TapGestureRecognizer Tapped="Upload_Tapped" />
                 </Frame.GestureRecognizers>
-                <Label x:Name="signinLable"
+                <Label 
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        FontAttributes="Bold"

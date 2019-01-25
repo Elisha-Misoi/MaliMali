@@ -11,5 +11,15 @@ namespace MaliMali
         {
             InitializeComponent();
         }
+
+        void Carousel_SelectionChanged(object sender, Syncfusion.SfCarousel.XForms.SelectionChangedEventArgs e)
+        {
+
+        }
+
+        void Upload_Tapped(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

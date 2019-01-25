@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
 using Syncfusion.SfRating.XForms.iOS;
 using UIKit;
 
@@ -33,6 +34,9 @@ namespace MaliMali.iOS
 
             // Initialize SFCarouesl
             new Syncfusion.SfCarousel.XForms.iOS.SfCarouselRenderer();
+
+            // Initialize ImageCircle
+            ImageCircleRenderer.Init();
 
             LoadApplication(new App());
 
