@@ -21,6 +21,7 @@ namespace MaliMali
                 restart.IsVisible = true;
                 await SendCode();
             }
+
             else if (signinLable.Text == "VERIFY CODE")
             {
                 await VerifyCode();
@@ -53,6 +54,7 @@ namespace MaliMali
                     phoneEntry.Text = "";
                     phoneEntry.Placeholder = "verification code";
                     description.Text = "Enter the code sent to you";
+
                 }
                 catch (NSErrorException ex)
                 {
