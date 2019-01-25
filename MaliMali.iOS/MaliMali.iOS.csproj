@@ -161,6 +161,18 @@
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
       <Version>3.0.0.5</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Auth">
+      <Version>5.0.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="FirebaseDatabase.net">
+      <Version>3.3.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\car.jpg" />
@@ -204,6 +216,8 @@
     <BundleResource Include="Resources\search%402x.png" />
     <BundleResource Include="Resources\search%403x.png" />
     <BundleResource Include="Resources\all.png" />
+    <BundleResource Include="Resources\background.jpg" />
+    <BundleResource Include="Resources\ke.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\MaliMali\MaliMali.projitems" Label="Shared" />

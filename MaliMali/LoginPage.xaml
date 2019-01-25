@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="MaliMali.LoginPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Image Aspect="AspectFill" Source="background.jpg" />
+
+            <Grid BackgroundColor="Black" Opacity="0.8" />
+
+            <StackLayout HorizontalOptions="Center" Margin="0,0,0,250" VerticalOptions="Center">
+                <Label VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="65"
+                       HorizontalTextAlignment="Center"
+                       Text="MaliMali"
+                       TextColor="White" />
+                <Label HorizontalOptions="Center"
+                       Text="A mall at the palm of your hands."
+                       FontAttributes="Bold"
+                       TextColor="White" />
+            </StackLayout>
+
+
+            <ActivityIndicator x:Name="activityIndicator"
+                               Margin="0,-380,0,0"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               IsRunning="true"
+                               Color="#03a9f5" />
+
+
+            <StackLayout Margin="5,10,10,10"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="End">
+                <Label x:Name="description"
+                       Text="Your mobile number to get started"
+                       TextColor="White" />
+                <StackLayout Margin="10,20,10,0"
+                             HorizontalOptions="FillAndExpand"
+                             Orientation="Horizontal">
+
+                    <Image x:Name="flagImage"
+                           WidthRequest="50"
+                           HeightRequest="30"
+                           VerticalOptions="Center"
+                           Aspect="Fill"
+                           Source="ke.png">
+                        <!--             <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Grid_Tapped" />
+                        </Image.GestureRecognizers>-->
+                    </Image>
+                    <Label x:Name="prefix"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           FontSize="18"
+                           Text="+254"
+                           TextColor="White">
+                        <!--                      <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Grid_Tapped" />
+                        </Label.GestureRecognizers>-->
+                    </Label>
+
+                    <Frame HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           BackgroundColor="Transparent"
+                           BorderColor="White"
+                           CornerRadius="10"
+                           Padding="2">
+                        <Entry x:Name="phoneEntry"
+                               Margin="0"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               BackgroundColor="Transparent"
+                               Keyboard="Telephone"
+                               Placeholder="phone number"
+                               PlaceholderColor="LightGray"
+                               TextColor="White" />
+                    </Frame>
+
+                </StackLayout>
+
+                <Frame x:Name="signinFrame"
+                       Margin="0,20,0,0"
+                       WidthRequest="150"
+                       HorizontalOptions="FillAndExpand"
+                       BackgroundColor="#03a9f5"
+                       BorderColor="#03a9f5"
+                       CornerRadius="20"
+                       Padding="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SigninFrame_Tapped" />
+                    </Frame.GestureRecognizers>
+                    <Label x:Name="signinLable"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           FontSize="12"
+                           Text="SEND CODE"
+                           TextColor="White" />
+                </Frame>
+
+                <StackLayout x:Name="restart"
+                             Margin="0,5,0,5"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
+                             BackgroundColor="Transparent">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Restart_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                    <Label HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Text="restart"
+                           TextColor="#03a9f5" />
+                </StackLayout>
+
+            </StackLayout>
+
+
+
+        </Grid>
+
+
+
+    </ContentPage.Content>
+</ContentPage>
