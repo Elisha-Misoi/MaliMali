@@ -23,6 +23,7 @@
                 <Label Grid.Row="0"
                        FontAttributes="Bold"
                        FontSize="14"
+                       x:Name="title"
                        Text="BWM M5" />
 
                 <Frame Grid.Row="1"
@@ -30,7 +31,7 @@
                        HasShadow="false"
                        IsClippedToBounds="true"
                        Padding="0">
-                    <Image Aspect="AspectFill" Source="car.jpg" />
+                    <Image Aspect="AspectFill" x:Name="image" Source="car.jpg" />
                 </Frame>
 
                 <Grid Grid.Row="2">
@@ -45,6 +46,7 @@
                            FontAttributes="Bold"
                            FontSize="14"
                            Text="Price: 800K"
+                           x:Name="price"
                            TextColor="#03a9f5" />
 
 

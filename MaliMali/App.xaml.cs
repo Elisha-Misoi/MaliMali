@@ -11,7 +11,7 @@ namespace MaliMali
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Tabbed();
         }
 
         protected override void OnStart()
