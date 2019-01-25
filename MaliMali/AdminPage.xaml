@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="MaliMali.AdminPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms">
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="WhiteSmoke">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="202" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <syncfusion:SfCarousel x:Name="carousel"
+                                   Grid.Row="0"
+                                   ItemHeight="200"
+                                   RotationAngle="45"
+                                   SelectionChanged="Carousel_SelectionChanged"
+                                   Offset="20">
+                <syncfusion:SfCarousel.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="#a9a9a9"
+                               CornerRadius="10"
+                               HasShadow="false"
+                               IsClippedToBounds="true"
+                               Padding="0">
+                            <Image Aspect="AspectFill" Source="{Binding URL}" />
+                        </Frame>
+                    </DataTemplate>
+                </syncfusion:SfCarousel.ItemTemplate>
+            </syncfusion:SfCarousel>
+
+
+            <Frame Grid.Row="1" Margin="10">
+
+                <Grid Margin="15,20,15,0"
+                      ColumnSpacing="15"
+                      RowSpacing="10">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           FontSize="14"
+                           Text="Ttile:" />
+                    <Entry x:Name="title"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           FontSize="14"
+                           Keyboard="Default"
+                           Placeholder="eg. cooking pan" />
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           FontSize="14"
+                           Text="Price:" />
+                    <Entry x:Name="price"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           FontSize="14"
+                           Keyboard="Numeric"
+                           Placeholder="e.g 5000" />
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           FontSize="14"
+                           Text="Amount Available:" />
+                    <Entry x:Name="ammount_available"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           FontSize="14"
+                           Keyboard="Numeric"
+                           Placeholder="e.g 70" />
+                    <Label Grid.Row="3"
+                           Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           FontSize="14"
+                           Text="Category:" />
+                    <Picker x:Name="categoryPicker"
+                            Title="Category"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            FontSize="14" />
+
+                </Grid>
+
+
+            </Frame>
+
+
+
+            <Frame Grid.Row="2"
+                   Margin="10"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="End"
+                   BackgroundColor="#03a9f5"
+                   BorderColor="#03a9f5"
+                   CornerRadius="1"
+                   Padding="15">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Checkout_Tapped" />
+                </Frame.GestureRecognizers>
+                <Label x:Name="signinLable"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="17"
+                       Text="Upload Item"
+                       TextColor="White" />
+            </Frame>
+
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
