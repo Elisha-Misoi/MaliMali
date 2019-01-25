@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="MaliMali.History"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:MaliMali.View"
+             Title="History">
+    <ContentPage.Content>
+
+        <Grid Margin="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0">
+
+                <Label FontAttributes="Bold"
+                       FontSize="25"
+                       Text="Total Spent:" />
+                <Label FontAttributes="Bold"
+                       FontSize="20"
+                       Text="Ksh. 876,000"
+                       TextColor="#03a9f5" />
+
+            </StackLayout>
+
+
+            <ListView x:Name="ItemsListView"
+                      Grid.Row="1"
+                      HasUnevenRows="false"
+                      RowHeight="280"
+                      SelectionMode="None"
+                      SeparatorVisibility="None">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <view:ItemCard />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

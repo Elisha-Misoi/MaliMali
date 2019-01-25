@@ -15,7 +15,7 @@
             </Grid.RowDefinitions>
 
 
-            <!--<syncfusion:SfCarousel x:Name="carousel"
+            <syncfusion:SfCarousel x:Name="carousel"
                                    Grid.Row="0"
                                    ItemHeight="200"
                                    RotationAngle="45"
@@ -26,7 +26,7 @@
                         <view:ItemCartView />
                     </DataTemplate>
                 </syncfusion:SfCarousel.ItemTemplate>
-            </syncfusion:SfCarousel>-->
+            </syncfusion:SfCarousel>
 
 
             <Frame Grid.Row="1" Margin="10">
