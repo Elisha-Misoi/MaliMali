@@ -6,4 +6,6 @@
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Potential Code Quality Issues", "RECS0026:Possible unassigned object created by 'new'", Justification = "<Pending>", Scope = "member", Target = "~M:MaliMali.iOS.AppDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)~System.Boolean")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Code Notifications", "XI0003:Notifies you when using a deprecated, obsolete or unavailable Apple API", Justification = "<Pending>", Scope = "member", Target = "~M:MaliMali.iOS.AppDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)~System.Boolean")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Potential Code Quality Issues", "RECS0165:Asynchronous methods should return a Task instead of void", Justification = "<Pending>", Scope = "member", Target = "~M:MaliMali.CartPage.OnAppearing")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Potential Code Quality Issues", "RECS0165:Asynchronous methods should return a Task instead of void", Justification = "<Pending>", Scope = "member", Target = "~M:MaliMali.History.OnAppearing")]
 

@@ -13,6 +13,12 @@ namespace MaliMali
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            ItemsListView.ItemsSource = await Services.DatabaseHelper.Instance.GetItems("Items");
+        }
+
         async void Categories_Tapped(object sender, System.EventArgs e)
         {
 
@@ -20,7 +26,8 @@ namespace MaliMali
 
         async void ItemsListView_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
-           
+            var tapped = e.Item as Model.Item;
+            await Navigation.PushAsync(new ViewItem(tapped));
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MaliMali.Services
     public class DatabaseHelper
     {
         // Firebase Database Client
-        public readonly FirebaseClient firebaseClient = new FirebaseClient("https://carrent-test.firebaseio.com/");
+        public readonly FirebaseClient firebaseClient = new FirebaseClient("https://malimali.firebaseio.com/");
 
         // Firebase Database OfflineClient
 
@@ -55,11 +55,29 @@ namespace MaliMali.Services
         }
 
 
+        // Deleting Objects in DB
+        public async Task<int> DeleteObject(string path)
+        {
+            int status_code = 599; // network connect timeout error
+            try
+            {
+                await firebaseClient
+                    .Child(path)
+                    .DeleteAsync();
+                status_code = 200; // db update OK
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                Helpers.DialogsHelper.Instance.HandleError(DialogsHelper.Errors.NetworkError, null);
+            }
+            return status_code;
+        }
+
         // Getting single user
         public async Task<Model.User> GetSingleUser(string path)
         {
             var user = new Model.User();
-            user = null;
             try
             {
                 user = await firebaseClient
@@ -75,15 +93,16 @@ namespace MaliMali.Services
         }
 
         // Get Items
-        public async Task<ObservableCollection<Model.Item>> GetItems()
+        public async Task<ObservableCollection<Model.Item>> GetItems(string path)
         {
             ObservableCollection<Model.Item> items = new ObservableCollection<Model.Item>();
-            items = null;
             try
             {
-                var _items = await firebaseClient.Child("Items/").OnceAsync<Model.Item>();
+                var _items = await firebaseClient.Child(path).OnceAsync<Model.Item>();
                 foreach(var item in _items) 
                 {
+                    item.Object.Image_url = item.Object.Images[0];
+                    item.Object.Category = "Category: " + item.Object.Category;
                     items.Add(item.Object);
                 }
             }

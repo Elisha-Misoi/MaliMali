@@ -54,6 +54,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -98,11 +102,23 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\DialogsHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DatabaseHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FilePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FileUtility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\StorageHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DateHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MPESA\C2BRegUrlsApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MPESA\C2BsimulateApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MPESA\OauthApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MPESA\TransactionStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewItem.xaml.cs">
+      <DependentUpon>ViewItem.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\MPESA\" />
   </ItemGroup>
 </Project>
